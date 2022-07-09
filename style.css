@@ -1,0 +1,97 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --poppins: 'Poppins', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none;}
+html::-webkit-scrollbar {
+  width: 5px;
+  height: 20px;
+  background-color: var(--Cyan);
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--Orange);
+  border-radius: 8px;
+}
+body {
+  min-height: 100vh;
+  min-width: 375px;
+  max-width: 1440px;
+  font-family: var(--poppins);
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray);
+}
+header {
+  padding: 4em 1em 1.5em 1em;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 37em;
+}
+h1 {
+  font-size: 1.6em;
+  font-weight: 300;
+  color: var(--Grayish-Blue);
+}
+h2 {
+  font-size: 1.6em;
+  color: var(--Very-Dark-Blue);
+}
+.head-desc {
+  color: var(--Grayish-Blue);
+  margin: 1em 0.75em;
+}
+.card-container {
+  margin-top: 1.5em;text-align: center;
+}
+.card {
+  display: inline-block;
+  max-width: 23.5em;
+  width: 100%;
+  text-align: left;
+  margin: 0.75em;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 8px 8px 2px rgba(37, 34, 223, 0.15);
+  border-top: 4px solid transparent;
+  border-radius: 0.5em;
+  padding: 2em 1.75em;
+  background-color: hsl(0, 0, 100%);
+}
+.card:nth-child(1) {
+  border-color: var(--Cyan);
+}
+.card:nth-child(2) {
+  border-color: var(--Red);
+}
+.card:nth-child(3) {
+  border-color: hsl(228, 45%, 44%);
+}
+.card:nth-child(4) {
+  border-color: var(--Orange);
+}
+.card-title {
+  color: var(--Very-Dark-Blue);
+}
+.card-desc {
+  color: var(--Grayish-Blue);
+  font-size: 14px;
+  letter-spacing: .5px;
+  line-height: 1.8;
+  margin: 0.75em 0em;
+  
+}
+.card-icon {
+  text-align: right;
+  margin-top: 2.5em;
+}
+@media (min-width: 1024px) {
+  .card:nth-child(1), .card:nth-child(3) {
+    transform: translateY(50%);
+  }
+}
